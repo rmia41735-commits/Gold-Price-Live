@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10100e">
+  <meta name="description" content="Saudi Arabia live gold price dashboard in Saudi Riyals.">
+  <title>Saudi Gold Live | Gold Price in Saudi Arabia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">Au</span><span>SAUDI GOLD<span class="brand-sub">LIVE MARKET</span></span></a>
+    <a class="source-link" href="https://www.livepriceofgold.com/saudi-arabia-gold-price.html" target="_blank" rel="noopener">Original live source ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> SAUDI ARABIA GOLD MARKET</div>
+        <h1>Gold prices.<br><em>Clear and current.</em></h1>
+        <p>Follow Saudi gold rates in SAR, check the live market source, and estimate the value of your gold.</p>
+        <a class="gold-button" href="#live-market">View live market <span>↓</span></a>
+      </div>
+      <div class="hero-art" aria-label="Gold bullion illustration">
+        <div class="halo"></div><div class="bar bar-back"></div><div class="bar bar-mid"></div><div class="bar bar-front"><span>FINE GOLD</span><b>999.9</b><small>24 KARAT</small></div>
+        <div class="art-caption">PURE GOLD · 24K</div>
+      </div>
+    </section>
+
+    <section class="notice">
+      <span class="notice-icon">i</span>
+      <p><strong>Live market data:</strong> The panel below loads the current Saudi Arabia gold-price page from LivePriceofGold. Prices are indicative spot rates; shop prices can include making charges, VAT and dealer margins.</p>
+    </section>
+
+    <section id="live-market" class="section">
+      <div class="section-heading">
+        <div><div class="eyebrow muted">MARKET FEED</div><h2>Live gold rates</h2></div>
+        <button id="reload" class="refresh-button" type="button"><span>↻</span> Refresh feed</button>
+      </div>
+      <div class="feed-meta"><span class="live-dot"></span> Live source panel <span class="feed-note">Updates when the source page refreshes</span></div>
+      <div class="frame-wrap">
+        <iframe id="gold-frame" title="Live Saudi Arabia gold prices" src="https://www.livepriceofgold.com/saudi-arabia-gold-price.html" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+      <p class="frame-fallback">If the live table does not appear here, <a href="https://www.livepriceofgold.com/saudi-arabia-gold-price.html" target="_blank" rel="noopener">open the live gold-price source directly ↗</a>.</p>
+    </section>
+
+    <section class="calculator-section">
+      <div class="calculator-intro"><div class="eyebrow muted">QUICK ESTIMATE</div><h2>Gold value calculator</h2><p>Enter the weight and the per-gram rate shown in the live market feed.</p></div>
+      <div class="calculator">
+        <label for="weight">Gold weight <span>grams</span></label>
+        <div class="input-wrap"><input id="weight" type="number" min="0" step="0.001" value="10"><span>g</span></div>
+        <label for="rate">Gold rate <span>SAR / gram</span></label>
+        <div class="input-wrap"><input id="rate" type="number" min="0" step="0.01" value="467.80"><span>SAR</span></div>
+        <div class="estimate-label">Estimated raw gold value</div>
+        <div id="total" class="total">4,678.00 <small>SAR</small></div>
+        <p class="calc-note">Excludes VAT, workmanship, stones and shop premiums.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>SAUDI GOLD LIVE</span><span>For information only · Verify with your local jeweller before purchase.</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
